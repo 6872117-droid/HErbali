@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herbalia - Plantas Medicinales y Bienestar Natural</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'verde-principal': '#38a169', // Verde medio
+                        'verde-oscuro': '#276749',  // Verde oscuro para acentos
+                        'crema-claro': '#f6e5e5',   // Tono crema suave
+                        'tierra-suave': '#b79477',  // Tono marrón suave
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    backgroundImage: theme => ({
+                        // Fondo con placeholder de hojas o jardín
+                        'fondo-herbal': "url('https://placehold.co/1920x1080/0e331b/ffffff?text=Jardín+Herbal+Natural')",
+                    })
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos generales para asegurar que el fondo se vea bien */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        .hero-section {
+            background-image: var(--bg-image);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Efecto parallax */
+            min-height: 85vh;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor principal con fondo natural y semi-transparente -->
+    <div class="hero-section" style="--bg-image: url('https://placehold.co/1920x1080/0e331b/ffffff?text=Jardín+Herbal+Natural');">
+        <!-- Overlay oscuro para mejorar la legibilidad del texto -->
+        <div class="bg-black bg-opacity-40 min-h-full">
+
+            <!-- Navegación -->
+            <header class="p-4 md:p-6 shadow-lg bg-verde-oscuro bg-opacity-70 backdrop-blur-sm sticky top-0 z-50">
+                <nav class="max-w-7xl mx-auto flex justify-between items-center">
+                    <h1 class="text-2xl font-bold text-crema-claro tracking-widest">Herbalia</h1>
+                    <div class="space-x-4 flex">
+                        <a href="#beneficios" class="text-crema-claro hover:text-verde-principal transition duration-300 hidden sm:inline">Beneficios</a>
+                        <a href="#productos" class="text-crema-claro hover:text-verde-principal transition duration-300 font-semibold">Tienda</a>
+                        <a href="#contacto" class="text-crema-claro hover:text-verde-principal transition duration-300 hidden sm:inline">Contacto</a>
+                    </div>
+                </nav>
+            </header>
+
+            <!-- Sección Principal / Héroe -->
+            <section class="max-w-7xl mx-auto px-6 py-20 md:py-32 flex flex-col items-center justify-center text-center">
+                <h2 class="text-5xl md:text-7xl font-extrabold text-white mb-4 leading-tight">
+                    El Poder Curativo de la Naturaleza
+                </h2>
+                <p class="text-xl md:text-2xl text-crema-claro max-w-3xl mb-10">
+                    Descubre nuestra colección de plantas medicinales puras y productos naturales para nutrir tu cuerpo y mente de forma integral.
+                </p>
+                <a href="#productos" class="bg-verde-principal text-white font-bold py-3 px-8 rounded-full shadow-xl hover:bg-verde-oscuro transition duration-300 transform hover:scale-105">
+                    Explora la Tienda Hoy
+                </a>
+            </section>
+        </div>
+    </div>
+
+    <!-- Sección de Beneficios Específicos -->
+    <section id="beneficios" class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h3 class="text-4xl font-bold text-verde-oscuro text-center mb-12">Nuestros Pilares de Bienestar</h3>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Beneficio 1: Manzanilla (Anti-inflamatorio) -->
+                <div class="bg-crema-claro p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border-b-4 border-verde-principal">
+                    <img src="img/flores de manzanilla.jpg" alt="Imagen de Manzanilla" class="w-full h-40 object-cover rounded-lg mb-4"> 
+                    <h4 class="text-2xl font-semibold text-tierra-suave mb-3">Digestión y Calma</h4>
+                    <p class="text-gray-700">La **Manzanilla** (Chamomilla recutita) es clave para aliviar el malestar digestivo y promover la relajación. Su acción antiinflamatoria la hace ideal para infusiones nocturnas.</p>
+                </div>
+
+                <!-- Beneficio 2: Jengibre (Inmunidad) -->
+                <div class="bg-crema-claro p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border-b-4 border-verde-principal">
+                    <img src="img/Jenjibre.jpg" alt="Imagen de Raíz de Jengibre" class="w-full h-40 object-cover rounded-lg mb-4"> 
+                    <h4 class="text-2xl font-semibold text-tierra-suave mb-3">Refuerzo Inmune</h4>
+                    <p class="text-gray-700">El **Jengibre** (Zingiber officinale) es un potente antioxidante. Estimula la circulación y es fundamental para combatir resfriados y fortalecer las defensas naturales del cuerpo.</p>
+                </div>
+
+                <!-- Beneficio 3: Lavanda (Sueño) -->
+                <div class="bg-crema-claro p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border-b-4 border-verde-principal">
+                    <img src="img/lavanda.jpg" alt="Imagen de Flor de Lavanda" class="w-full h-40 object-cover rounded-lg mb-4"> 
+                    <h4 class="text-2xl font-semibold text-tierra-suave mb-3">Sueño Reparador</h4>
+                    <p class="text-gray-700">La **Lavanda** (Lavandula angustifolia) posee propiedades sedantes naturales. Usada en aceites o sahumerios, ayuda a reducir la ansiedad y mejora la calidad del sueño.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Compra y Venta (Tienda) -->
+    <section id="productos" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h3 class="text-4xl font-bold text-verde-oscuro text-center mb-4">Nuestra Tienda Herbal</h3>
+            <p class="text-center text-xl text-gray-600 mb-12">Productos seleccionados, 100% orgánicos y cosechados de forma sostenible.</p>
+
+            <!-- Contenedor de Alerta de Compra (Simulación de carrito) -->
+            <div id="mensaje-compra" class="hidden fixed top-4 right-4 bg-verde-principal text-white px-6 py-3 rounded-lg shadow-2xl z-[100] transition duration-500 ease-in-out">
+                Producto añadido al carrito. ¡Gracias por tu compra!
+            </div>
+
+            <!-- Grid de Productos -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Producto 1: Tila -->
+                <div class="bg-white p-6 rounded-xl shadow-xl flex flex-col items-center text-center transition duration-300 hover:shadow-2xl">
+                    <img src="img/tila.jpeg" alt="Infusión de Tila" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h4 class="text-xl font-bold text-verde-oscuro">Infusión Pura de Tila</h4>
+                    <p class="text-sm text-gray-500 mb-3">Sedante natural para el estrés.</p>
+                    <p class="text-2xl font-extrabold text-verde-principal mb-4">$12.50</p>
+                    <button onclick="comprarProducto('Infusión Pura de Tila')" class="w-full bg-tierra-suave text-white py-2 rounded-full hover:bg-verde-oscuro transition duration-300">
+                        Añadir al Carrito
+                    </button>
+                </div>
+
+                <!-- Producto 2: Aceite de Romero -->
+                <div class="bg-white p-6 rounded-xl shadow-xl flex flex-col items-center text-center transition duration-300 hover:shadow-2xl">
+                    <img src="img/aceite de romero.jpg" alt="Aceite Esencial de Romero" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h4 class="text-xl font-bold text-verde-oscuro">Aceite Esencial de Romero</h4>
+                    <p class="text-sm text-gray-500 mb-3">Estimulante mental y capilar.</p>
+                    <p class="text-2xl font-extrabold text-verde-principal mb-4">$19.99</p>
+                    <button onclick="comprarProducto('Aceite Esencial de Romero')" class="w-full bg-tierra-suave text-white py-2 rounded-full hover:bg-verde-oscuro transition duration-300">
+                        Añadir al Carrito
+                    </button>
+                </div>
+
+                <!-- Producto 3: Cápsulas de Cúrcuma -->
+                <div class="bg-white p-6 rounded-xl shadow-xl flex flex-col items-center text-center transition duration-300 hover:shadow-2xl">
+                    <img src="img/capsula de curcuma.jpg" alt="Cápsulas de Cúrcuma" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h4 class="text-xl font-bold text-verde-oscuro">Cápsulas de Cúrcuma</h4>
+                    <p class="text-sm text-gray-500 mb-3">Potente antiinflamatorio natural.</p>
+                    <p class="text-2xl font-extrabold text-verde-principal mb-4">$24.99</p>
+                    <button onclick="comprarProducto('Cápsulas de Cúrcuma')" class="w-full bg-tierra-suave text-white py-2 rounded-full hover:bg-verde-oscuro transition duration-300">
+                        Añadir al Carrito
+                    </button>
+                </div>
+
+                <!-- Producto 4: Té de Menta Fresca -->
+                <div class="bg-white p-6 rounded-xl shadow-xl flex flex-col items-center text-center transition duration-300 hover:shadow-2xl">
+                    <img src="img/TE de menta.jpeg" alt="Té de Menta" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h4 class="text-xl font-bold text-verde-oscuro">Té de Menta Orgánica</h4>
+                    <p class="text-sm text-gray-500 mb-3">Alivia la indigestión y refresca.</p>
+                    <p class="text-2xl font-extrabold text-verde-principal mb-4">$9.95</p>
+                    <button onclick="comprarProducto('Té de Menta Orgánica')" class="w-full bg-tierra-suave text-white py-2 rounded-full hover:bg-verde-oscuro transition duration-300">
+                        Añadir al Carrito
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto y Footer -->
+    <footer id="contacto" class="bg-verde-oscuro text-white py-12">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            
+            <!-- Columna 1: Información de Contacto -->
+            <div>
+                <h4 class="text-xl font-semibold mb-4 border-b border-verde-principal inline-block">Contáctanos</h4>
+                <p class="text-crema-claro">Email: info@herbalia.com</p>
+                <p class="text-crema-claro">Teléfono: +52 55 1234 5678</p>
+                <p class="text-crema-claro mt-2">Horario: Lun-Vie 9:00 - 18:00</p>
+            </div>
+            
+            <!-- Columna 2: Links Rápidos -->
+            <div>
+                <h4 class="text-xl font-semibold mb-4 border-b border-verde-principal inline-block">Enlaces</h4>
+                <ul class="space-y-2">
+                    <li><a href="#beneficios" class="hover:text-verde-principal transition duration-300">Nuestros Beneficios</a></li>
+                    <li><a href="#productos" class="hover:text-verde-principal transition duration-300">Tienda</a></li>
+                    <li><a href="#" class="hover:text-verde-principal transition duration-300">Política de Privacidad</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Newsletter (Formulario Simulada) -->
+            <div>
+                <h4 class="text-xl font-semibold mb-4 border-b border-verde-principal inline-block">Suscríbete</h4>
+                <p class="text-crema-claro mb-3">Recibe ofertas exclusivas y consejos de herbalismo.</p>
+                <div class="flex flex-col space-y-2">
+                    <input type="email" placeholder="Tu correo electrónico" class="p-2 rounded text-gray-800 focus:ring-verde-principal focus:border-verde-principal" />
+                    <button class="bg-verde-principal text-white py-2 rounded font-semibold hover:bg-tierra-suave transition duration-300">
+                        Suscribir
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="mt-10 pt-6 border-t border-gray-700 text-center">
+            <!-- INSERCIÓN DEL NOMBRE SOLICITADO -->
+            <p class="text-sm text-gray-400">&copy; 2024 Herbalia. Todos los derechos reservados. | Desarrollado por Yancy Paola Flores Argueta.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Función de JavaScript para simular la compra y mostrar una notificación
+        function comprarProducto(nombreProducto) {
+            const mensajeDiv = document.getElementById('mensaje-compra');
+            
+            // 1. Actualiza el mensaje
+            mensajeDiv.innerHTML = `<span class="font-bold">${nombreProducto}</span> añadido al carrito. ¡Gracias por tu compra!`;
+
+            // 2. Muestra el mensaje
+            mensajeDiv.classList.remove('hidden');
+            mensajeDiv.classList.add('animate-in', 'slide-in-from-right');
+
+            // 3. Oculta el mensaje después de 3 segundos
+            setTimeout(() => {
+                mensajeDiv.classList.remove('animate-in', 'slide-in-from-right');
+                mensajeDiv.classList.add('animate-out', 'fade-out-to-r-0'); // Se usa una clase para simular el fade out
+
+                // Ocultar realmente después de la animación (simulada aquí con un tiempo extra)
+                setTimeout(() => {
+                    mensajeDiv.classList.add('hidden');
+                    mensajeDiv.classList.remove('animate-out', 'fade-out-to-r-0');
+                }, 500); // 500ms para la transición de salida
+            }, 3000);
+            
+            // Nota: En un entorno real, aquí se enviarían los datos del producto a un servidor.
+            console.log(`Simulación: Producto '${nombreProducto}' agregado al carrito.`);
+        }
+    </script>
+</body>
+</html>
